@@ -80,10 +80,25 @@
   }
 
   .archive__item-title {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
+.publications-title {
+  margin-top: 10rem;  /* 或者根据你喜欢的空间调整，比如 2rem, 4rem */
+}
+
+.archive__item-meta {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  //font-size: 0.95em; /* 稍微字体小一点点，更清爽 */
+}
+
+.archive__item-titlemore {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  //font-size: 0.95em; /* 稍微字体小一点点，更清爽 */
+}
 
 /*
    List view

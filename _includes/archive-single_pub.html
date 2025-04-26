@@ -4,7 +4,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
     <!-- 第一行: 论文标题 -->
-    <h2 class="archive__item-title archive__item-titlemore" itemprop="headline">
+    <h2 class="archive__item-title" itemprop="headline">
       {% if post.paperurl %}
         <a href="{{ post.paperurl }}" target="_blank">{{ post.title }}</a>
       {% else %}
@@ -64,25 +64,25 @@
       </p>
     {% endif %}
 
-    <!-- 第三行: 状态 -->
-    {% if post.status %}
-      <p class="archive__item-status archive__item-meta">
-        <strong>Status:</strong> <i>{{ post.status }}</i>
+    <!-- 第三行: Journal -->
+    {% if post.venue %}
+      <p class="archive__item-venue archive__item-meta">
+        <strong>Journal:</strong> <i>{{ post.venue }}</i>
       </p>
     {% endif %}
 
-<!--  {% if post.date %}-->
-<!--    <p class="archive__item-date">-->
-<!--      <strong>Published:</strong> {{ post.date | date: "%Y-%m" }}-->
+  {% if post.date %}
+    <p class="archive__item-date archive__item-meta">
+      <strong>Published:</strong> {{ post.date | date: "%Y-%m" }}
 
-<!--      {% if post.appendix_link %}-->
-<!--        |         <strong><a href="{{ post.appendix_link }}" target="_blank">-->
-<!--          {{ post.appendix_title | default: "Online Appendix" }}-->
-<!--        </a></strong>-->
-<!--      {% endif %}-->
+      {% if post.appendix_link %}
+        |         <strong><a href="{{ post.appendix_link }}" target="_blank">
+          {{ post.appendix_title | default: "Online Appendix" }}
+        </a></strong>
+      {% endif %}
 
-<!--    </p>-->
-<!--  {% endif %}-->
+    </p>
+  {% endif %}
 
 
 
