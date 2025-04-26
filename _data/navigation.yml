@@ -11,7 +11,8 @@ main:
     url: /cv/
 
   - title: "Google Scholar"
-    url: /google_scholar/
+    url: https://scholar.google.com/citations?user=hTM9DrQAAAAJ&hl=en
+    external: true
 
 
 
