@@ -175,10 +175,10 @@ kramdown:
 
 # Collections
 collections:
-  research:
+  home:
     output: true
     permalink: /:collection/:path/
-  teaching:
+  research:
     output: true
     permalink: /:collection/:path/
   cv:
