@@ -9,7 +9,13 @@ redirect_from:
   - /about.html
 ---
 
-Hi, this is Zexin Ye, PhD candidate from OSU econ department.
+Hi, this is Zexin Ye (叶泽心), welcome to my website!
+
+I am a Ph.D. candidate in Economics at The Ohio State University.
+
+My research interests lie in Industrial Organization, with a current focus on algorithmic collusion.
+
+I will be on the job market in 2025–26.
 
 
 [//]: # (Getting started)

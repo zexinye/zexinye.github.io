@@ -1,0 +1,45 @@
+{% include base_path %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <!-- 一行输出: 标题 + with coauthors + . Journal: venue -->
+    <p class="archive__item-cv">
+
+        "{{ post.title }},"
+
+
+      {% assign coauthors_list = "" %}
+
+      {% if post.coauthor1 %}
+        {% assign coauthors_list = post.coauthor1 %}
+      {% endif %}
+      {% if post.coauthor2 %}
+        {% if coauthors_list != "" %}
+          {% assign coauthors_list = coauthors_list | append: ", " %}
+        {% endif %}
+        {% assign coauthors_list = coauthors_list | append: post.coauthor2 %}
+      {% endif %}
+      {% if post.coauthor3 %}
+        {% if coauthors_list != "" %}
+          {% assign coauthors_list = coauthors_list | append: ", " %}
+        {% endif %}
+        {% assign coauthors_list = coauthors_list | append: post.coauthor3 %}
+      {% endif %}
+
+      {% if coauthors_list != "" %}
+        with {{ coauthors_list }},
+      {% endif %}
+
+      {% if post.status %}
+        <i>{{ post.status }},</i>
+      {% endif %}
+
+      {% if post.date %}
+        {{ post.date | date: "%Y" }}.
+      {% endif %}
+
+    </p>
+
+  </article>
+</div>
