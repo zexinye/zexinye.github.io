@@ -3,7 +3,7 @@ collection: research
 category: workingpaper
 permalink: 
 
-title: Do Regulations with Optional Enforcement Backfire in Addressing Negative Externalities? An Experimental Investigation
+title: "Optional Enforcement Backfires: Experimental Evidence on Regulating Externalities" 
 paperurl:
 
 coauthor1: Jian Huang
