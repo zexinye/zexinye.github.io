@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zexin Ye"
+  name             :
   avatar           : "selfie.JPG"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              :
   location         : "Columbus, OH"
   employer         :
   pubmed           :
