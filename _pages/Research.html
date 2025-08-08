@@ -26,3 +26,12 @@ author_profile: true
 {% for post in publications %}
   {% include archive-single_pub.html %}
 {% endfor %}
+
+<!-- Other Publications -->
+<h2 class="publications-title">Other Publications</h2>
+
+{% assign others = site.research | where: "category", "others" | sort: "date" | reverse %}
+{% for post in others %}
+  {% include archive-single_others.html %}
+{% endfor %}
+

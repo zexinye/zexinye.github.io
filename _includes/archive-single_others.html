@@ -1,0 +1,91 @@
+{% include base_path %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+
+    <!-- 第一行: 论文标题 -->
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" target="_blank">{{ post.title }}</a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </h2>
+
+    <!-- 第二行: Coauthors -->
+    {% if post.coauthor1 or post.coauthor2 or post.coauthor3 or post.coauthor4 or post.coauthor5 %}
+      <p class="archive__item-coauthors archive__item-meta">
+        <strong>Coauthors:</strong>
+
+        {% if post.coauthor1 %}
+          {% if post.coauthor1_link %}
+            <a href="{{ post.coauthor1_link }}" target="_blank">{{ post.coauthor1 }}</a>
+          {% else %}
+            {{ post.coauthor1 }}
+          {% endif %}
+        {% endif %}
+
+        {% if post.coauthor2 %}
+        ,
+          {% if post.coauthor2_link %}
+            <a href="{{ post.coauthor2_link }}" target="_blank">{{ post.coauthor2 }}</a>
+          {% else %}
+            {{ post.coauthor2 }}
+          {% endif %}
+        {% endif %}
+
+        {% if post.coauthor3 %}
+        ,
+          {% if post.coauthor3_link %}
+            <a href="{{ post.coauthor3_link }}" target="_blank">{{ post.coauthor3 }}</a>
+          {% else %}
+            {{ post.coauthor3 }}
+          {% endif %}
+        {% endif %}
+
+        {% if post.coauthor4 %}
+        ,
+          {% if post.coauthor4_link %}
+            <a href="{{ post.coauthor4_link }}" target="_blank">{{ post.coauthor4 }}</a>
+          {% else %}
+            {{ post.coauthor4 }}
+          {% endif %}
+        {% endif %}
+
+        {% if post.coauthor5 %}
+        ,
+          {% if post.coauthor5_link %}
+            <a href="{{ post.coauthor5_link }}" target="_blank">{{ post.coauthor5 }}</a>
+          {% else %}
+            {{ post.coauthor5 }}
+          {% endif %}
+        {% endif %}
+
+      </p>
+    {% endif %}
+
+    <!-- 第三行: Journal -->
+    {% if post.venue %}
+      <p class="archive__item-venue archive__item-meta">
+        <i>Book chapter in {{ post.venue }}</i>
+      </p>
+    {% endif %}
+
+  {% if post.date %}
+    <p class="archive__item-date archive__item-meta">
+      <strong>Published:</strong> {{ post.date | date: "%Y-%m" }}
+
+      {% if post.appendix_link %}
+        |         <strong><a href="{{ post.appendix_link }}" target="_blank">
+          {{ post.appendix_title | default: "Online Appendix" }}
+        </a></strong>
+      {% endif %}
+
+    </p>
+  {% endif %}
+
+
+
+
+  </article>
+</div>
