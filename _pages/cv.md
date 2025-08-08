@@ -37,3 +37,10 @@ Publications
 {% for post in publications %}
   {% include archive-single_cv_pub.html %}
 {% endfor %}
+
+Other Publications
+======
+{% assign others = site.research | where: "category", "others" | sort: "date" | reverse %}
+{% for post in others %}
+  {% include archive-single_cv_others.html %}
+{% endfor %}
