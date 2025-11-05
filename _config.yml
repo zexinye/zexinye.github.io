@@ -190,6 +190,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+  diarys:
+    output: true
+    permalink: /:name/
 
 # Defaults
 defaults:

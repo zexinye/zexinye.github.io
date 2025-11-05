@@ -13,9 +13,22 @@ Hi, this is Zexin Ye (叶泽心), welcome to my website!
 
 I am a Ph.D. candidate in Economics at The Ohio State University.
 
-My research interests lie in Industrial Organization, with a current focus on algorithmic collusion.
+My research interests lie in Industrial Organization, with a focus on algorithmic collusion. I combine tools from game theory and reinforcement learning to understand how autonomous pricing algorithms interact in competitive environments.
 
-I will be on the job market in 2025–26.
+I am on the job market for the 2025-26 academic year.
+
+
+You can view my [CV](/assets/cv/CV_ZexinYe.pdf){:target="_blank"} here.
+
+
+Email: ye.754@osu.edu
+
+
+
+
+
+
+
 
 
 [//]: # (Getting started)

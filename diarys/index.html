@@ -1,0 +1,19 @@
+---
+layout: default_diary
+#title: 我的日记索引
+---
+
+# 📖 我的日记索引
+
+
+{% assign sorted_diarys = site.diarys | sort: 'date' | reverse %}
+{% for entry in sorted_diarys %}
+  <details>
+    <summary>{{ entry.date | date: "%Y-%m-%d" }} - {{ entry.title }}</summary>
+    <div>{{ entry.content | markdownify }}</div>
+  </details>
+{% endfor %}
+
+
+
+
